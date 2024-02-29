@@ -1,0 +1,21 @@
+{
+  "name": "projektdt211g",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Oskar Sundström",
+  "license": "ISC",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0",
+    "sharp": "^0.33.2"
+  },
+  "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
+    "chart.js": "^4.4.1"
+  }
+}
