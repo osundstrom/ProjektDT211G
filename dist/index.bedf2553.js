@@ -610,12 +610,24 @@ async function getWeather() {
     const data = await response.json();
     let cloudData = data.clouds;
     let tempData = data.main;
-    console.log(data.clouds);
-    console.log(data.main);
+    let windData = data.wind;
+    let sunData = data.sys;
+    let sunrise = sunData.sunrise;
+    let sunset = sunData.sunset;
+    let sunriseDate = new Date(sunrise * 1000);
+    let sunsetDate = new Date(sunset * 1000);
     let weatherTemp = document.getElementById("weatherTemp");
-    weatherTemp.textContent = (tempData.temp - 273.15).toFixed(2);
+    weatherTemp.textContent = "Temperatur: " + (tempData.temp - 273.15).toFixed(2) + "\xb0C" + " men k\xe4nns som: " + (tempData.feels_like - 273.15).toFixed(2) + "\xb0C";
     let weatherClouds = document.getElementById("weatherClouds");
-    weatherClouds.textContent = "Molningt:" + cloudData.all + "%";
+    weatherClouds.textContent = "Molninghet: " + cloudData.all + "%";
+    let weatherWind = document.getElementById("weatherWind");
+    weatherWind.textContent = "Vind " + windData.speed + "m/s";
+    let weatherHumidity = document.getElementById("weatherHumidity");
+    weatherHumidity.textContent = "Luftfuktighet " + tempData.humidity + "%";
+    let weatherSunrise = document.getElementById("weatherSunrise");
+    weatherSunrise.textContent = "Soluppg\xe5ng " + sunriseDate;
+    let weatherSunset = document.getElementById("weatherSunset");
+    weatherSunset.textContent = "Soluppg\xe5ng " + sunsetDate;
 }
 
 },{}]},["4NHip","akDwf"], "akDwf", "parcelRequiree78e")
