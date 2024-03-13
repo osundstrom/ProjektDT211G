@@ -1,38 +1,64 @@
-body {
-    background-color: black;
+
+@use "partials/animation";
+
+
+#entirePage {
+    //background-color: rgb(205, 228, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x:hidden;
+    width: 100vw;
+    height: 100%;
+    
+    
 }
 
-.divSearch{
+#divFull{
+    width: 100vw;
+    height: 100vh;
+}
+
+#weatherAndSearch {
     margin-top: 5vh;
-    margin: auto;
     display: block;
     position: relative;
+    left: 38vw;
+      
+
+        input {
+            width: 20vw;
+            height: 6vh;
+            font-size: 150%;
+            display: block;
+            position: relative;
+          
+        }
     
-    input {
-        width: 20vw;
-        height: 6vh;
-        font-size: 180%;
-        display: block;
-    }
+        button {
+            width: 10vw;
+            height: 6vh;
+            margin-top: 1vh;
+            position: relative;
+            font-size: 140%;
+            font-weight: 900;
+    
+        }
 
-    button {
-        width: 10vw;
-        height: 6vh;
-        display: inline-flex;
-    }
+        button:hover {
+            background-color: lightgreen;
+        }
+    
+}
 
+#logo {
+    position: relative;
+    margin-top: 18vh;
+    display: block;
+    text-align: center;
+    img {
+        width: 45vw;
+    }
 }
 
 
-#weatherDivID {
-    background-color: #ffebcd;
-    margin: auto;
-
-    p {
-        display: block;
-        position: relative;
-        font-size: 120%;
-    }
 
 
-}

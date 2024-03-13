@@ -5,42 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="stylesheet.scss" />
+    
 
     <title>DT211G</title>
     
     <script src="scripts/weather.js" type="module"></script>
 </head>
-<body>
-    
+<body id="entirePage">
 
+    <div id="divFull">
+
+    <div id="logo">
+        <picture>
+            <source srcset="bilder/golfvaderlogo.png?as=webp" type="image/webp">
+            <img src="bilder/golfvaderlogo.png" alt="Logo">
+        </picture>
+    </div>
+    
+<div id="weatherAndSearch">
+
+    <div id="logoAnimation">
+        <picture> 
+            <source srcset="bilder/golfboll.png?as=webp" type="image/webp">
+            <img src="bilder/golfboll.png" alt="Golfboll" >
+        </picture>
+
+    </div>
 
 <div class="divSearch">
-    <input type="text" id="searchBar">
+    <input type="text" id="searchBar" placeholder="Sök plats">
         <button type="button" id="searchButton">Sök</button>
-        <button type="button" id="randomButton">Random</button>
 </div>
 
     <div id="weatherDivID">
-        <p id="weatherName"></p>
+        <div id="nameDiv">
+            <p id="weatherName"> </p>
+        </div>
 
-        <p id="weatherTemp"> </p>
+        <div id="tempFeelsType">
 
-        <p id="weatherFeels"> </p>
+            <p id="weatherType"> </p>
 
-        <p id="weatherType"> </p>
+            <p id="weatherTemp"> </p>
 
-        <p id="weatherClouds"> </p>
+            <p id="weatherFeels"> </p>
 
-        <p id="weatherWind"></p>
+        </div>
 
-        <p id="weatherHumidity"> </p>
+        <div id="cloudWindHumid">
+            <p id="weatherClouds"> </p>
 
-        <p id="weatherSunrise"></p>
+            <p id="weatherWind"> </p>
 
-        <p id="weatherSunset"></p>
+            <p id="weatherHumidity"> </p>
+        </div>
 
+            
+        <div id="sunRiseSet">
+            <p id="weatherSunrise"> </p>
 
-        
-    </div>>
+            <p id="weatherSunset"> </p>
+        </div>
+    </div>
+
+</div>
+</div>
 </body>
 </html>

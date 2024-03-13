@@ -601,9 +601,9 @@ async function getLocation() {
     }
     getWeather();
 }
-document.getElementById("searchButton").addEventListener("click", getLocation);
-async function getWeather() {
-    let weatherLocation = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=dc1d45d46bbc38d64cc9e756dc3885fa";
+/*------------------------------------------------------------------------------------------------------------------------------*/ document.getElementById("searchButton").addEventListener("click", getLocation);
+/*------------------------------------------------------------------------------------------------------------------------------*/ async function getWeather() {
+    let weatherLocation = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=dc1d45d46bbc38d64cc9e756dc3885fa&lang=sv";
     const response = await fetch(weatherLocation);
     const data = await response.json();
     let cloudData = data.clouds;
@@ -611,6 +611,8 @@ async function getWeather() {
     let windData = data.wind;
     let sunData = data.sys;
     let nameData = data.name;
+    let weatherData = data.weather;
+    let weatherDescription = weatherData[0].description;
     let sunrise = sunData.sunrise;
     let sunset = sunData.sunset;
     let sunriseDate = new Date(sunrise * 1000);
@@ -629,6 +631,17 @@ async function getWeather() {
     weatherSunset.textContent = "Soluppg\xe5ng " + sunsetDate;
     let weatherName = document.getElementById("weatherName");
     weatherName.textContent = "Koordinater: lon " + longitude + " lat " + latitude + "," + " M\xe4tplats: " + nameData + " " + sunData.country;
+    let weatherType = document.getElementById("weatherType");
+    weatherType.textContent = "Idag \xe4r det: " + weatherDescription;
+    let weatherDiv = document.getElementById("weatherDivID");
+    let entirePage = document.getElementById("divFull"); //byta bakgrund på denna
+    let goldvader1 = "url(bilder/golfboll.png)" //test
+    ;
+    if (weatherDiv.style.display = tempData.temp - 273.15 < 10) {
+        weatherDiv.style.display = "block";
+        entirePage.style.backgroundImage = goldvader1;
+        console.log("Byte bakgrund");
+    } else weatherDiv.style.display = "none";
 }
 
 },{}]},["bSTWU","70khM"], "70khM", "parcelRequiree78e")
