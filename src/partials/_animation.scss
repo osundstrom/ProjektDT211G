@@ -1,0 +1,71 @@
+
+/*-----------------------------------------------------------------För rutan med väder info-----------------------------------------------------------------------------------------*/
+
+@keyframes weatherInfoAppear {
+    from {
+        transform: scale(0,0);
+        
+    }
+
+    to {
+        transform: scale(1,1);
+        
+    }
+};
+
+
+#weatherDivID {
+    animation-name: weatherInfoAppear;
+    animation-duration: 2s;
+    width: 40vw;
+    margin-top: 2vh;
+    position: relative;
+    display: none;
+    left: -10vw;
+    margin-bottom: 10vh;
+
+    div {
+        background-color: lightgreen;
+        border: 1px solid black;
+        margin: 1%;
+    }
+
+    p {
+        position: relative;
+        display: block;
+        font-size: 100%;
+        padding: 1%;
+        font-weight: 700;
+    }
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@keyframes golfBallSpinn {
+    from {
+        transform:translateX(0) rotate(0deg);
+    }
+
+    to {
+        
+        transform:translateX(18vw) rotate(360deg);
+        
+    }
+};
+
+
+
+
+
+#logoAnimation {
+    img {
+        width: 2%;
+        animation: golfBallSpinn 6s linear infinite alternate;
+    }
+    
+}
