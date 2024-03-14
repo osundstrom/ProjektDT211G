@@ -106,6 +106,12 @@ body {
   overflow-x: hidden;
 }
 
+body footer {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
 #weatherAndSearch {
   margin-top: 5vh;
   display: block;
