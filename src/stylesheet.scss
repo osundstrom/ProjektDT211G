@@ -1,16 +1,22 @@
 
 @use "partials/animation";
-@use "partials/pictures";
 @use "partials/mixins";
-@use "partials/variables";
+@use "partials/variabels";
 
+
+/*------------------------Light------------------------------------------*/
+/*------------------------Light------------------------------------------*/
+/*------------------------Light------------------------------------------*/
+/*------------------------Light------------------------------------------*/
+
+@media (prefers-color-scheme:Light) {
 
 body {
-    background-color: rgb(205, 228, 255);
-    font-family: variables.$font-family;
+    background-color: variabels.$lighttheme-background;
+    font-family: variabels.$font-family;
+    color: variabels.$text-color;
     overflow-x:hidden;
     width: 100vw;
-
     footer {
         position: fixed;
         bottom: 0;
@@ -24,20 +30,21 @@ body {
     display: block;
     position: relative;
     left: 38vw;
-      
-
         input {
-            @include mixins.searchInput;  
+            @include mixins.searchInput;
+            width: 20vw;
+            height: 5vh; 
         }
 
         button {
             @include mixins.searchButton;
+            background-color: variabels.$lighttheme-background-button;
+            width: 10vw;
+            height: 4vh;
         }
-
         button:hover {
-            background-color: lightgreen;
+            background-color: variabels.$lighttheme-background-div;
         }
-    
 }
 
 #logo {
@@ -50,6 +57,301 @@ body {
     }
 }
 
+#logoAnimation {
+    img {
+        width: 2vw;
+        position: relative;
+
+    }
+    
+}
 
 
+#imageVarmt {
+    @include mixins.imagesBack;
+ }
+ #imageMellan {
+    @include mixins.imagesBack;
+ }
+ #imageKallt {
+    @include mixins.imagesBack;
+ }
+ #textKallt {
+    @include mixins.textWeather;
+ }
+ #textMellan {
+    @include mixins.textWeather;
+ }
+ #textVarmt {
+    @include mixins.textWeather;
+ }
 
+ 
+ #weatherDivID {
+    width: 40vw;
+    margin-top: 2vh;
+    position: relative;
+    display: none;
+    left: -10vw;
+    margin-bottom: 10vh;
+
+    div {
+        background-color: variabels.$lighttheme-background-div;
+        border: 1px solid variabels.$borderlight-color;
+        margin: 1%;
+    }
+
+    p {
+        position: relative;
+        display: block;
+        font-size: 100%;
+        padding: 1%;
+        font-weight: 700;
+    }
+};
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ @media (max-width:1025) { 
+
+    #weatherAndSearch {
+        margin-top: 5vh;
+        display: block;
+        position: relative;
+        left: 25vw;
+            input {
+                @include mixins.searchInput;
+                border-color: variabels.$lighttheme-background-button;
+                width: 40vw;
+                height: 5vh;
+            }
+    
+            button {
+                @include mixins.searchButton;
+                color: variabels.$text-color;
+                background-color: variabels.$lighttheme-background-button;
+                width: 20vw;
+                height: 6vh;
+            }
+            button:hover {
+                background-color: variabels.$lighttheme-background-div;
+            }
+    }
+
+
+    #weatherDivID {
+        width: 80vw;
+        margin-top: 2vh;
+        position: relative;
+        display: none;
+        left: -22vw;
+        margin-bottom: 10vh;
+    
+        div {
+            background-color: variabels.$lighttheme-background-div;
+            border: 1px solid variabels.$borderlight-color;
+            margin: 1%;
+        }
+    
+        p {
+            position: relative;
+            display: block;
+            font-size: 60%;
+            padding: 1%;
+            font-weight: 700;
+        }
+    }
+
+    #logoAnimation {
+        img {
+            width: 5vw;
+            position: relative;
+    
+        }
+        
+    }
+}
+
+}
+
+
+/*------------------------Dark------------------------------------------*/
+/*------------------------Dark------------------------------------------*/
+/*------------------------Dark------------------------------------------*/
+/*------------------------Dark------------------------------------------*/
+
+
+@media (prefers-color-scheme:dark) {
+
+    body {
+        background-color: variabels.$darktheme-background;
+        font-family: variabels.$font-family;
+        color: variabels.$textdark-color;
+        overflow-x:hidden;
+        width: 100vw;
+        footer {
+            position: fixed;
+            bottom: 0;
+            right: 20;
+          }
+    }
+    
+    
+    #weatherAndSearch {
+        margin-top: 5vh;
+        display: block;
+        position: relative;
+        left: 38vw;
+            input {
+                @include mixins.searchInput;
+                border-color: variabels.$darktheme-background-button;
+                width: 20vw;
+                height: 5vh;
+            }
+    
+            button {
+                @include mixins.searchButton;
+                color: variabels.$textdark-color;
+                background-color: variabels.$darktheme-background-button;
+                width: 10vw;
+                height: 4vh;
+            }
+            button:hover {
+                background-color: variabels.$lighttheme-background-div;
+            }
+    }
+    
+    #logo {
+        position: relative;
+        margin-top: 18vh;
+        display: block;
+        text-align: center;
+        img {
+            width: 50vw;
+        }
+    }
+
+    #logoAnimation {
+        img {
+            width: 2vw;
+            position: relative;
+    
+        }
+        
+    }
+    
+    
+    #imageVarmt {
+        @include mixins.imagesBack;
+     }
+     #imageMellan {
+        @include mixins.imagesBack;
+     }
+     #imageKallt {
+        @include mixins.imagesBack;
+     }
+     #textKallt {
+        @include mixins.textWeather;
+     }
+     #textMellan {
+        @include mixins.textWeather;
+     }
+     #textVarmt {
+        @include mixins.textWeather;
+     }
+
+
+     #weatherDivID {
+        width: 40vw;
+        margin-top: 2vh;
+        position: relative;
+        display: none;
+        left: -10vw;
+        margin-bottom: 10vh;
+    
+        div {
+            background-color: variabels.$darktheme-background-div;
+            border: 1px solid variabels.$borderdark-color;
+            margin: 1%;
+        }
+    
+        p {
+            position: relative;
+            display: block;
+            font-size: 100%;
+            padding: 1%;
+            font-weight: 700;
+        }
+    }
+
+    
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+ /*------------------------Media------------------------------------------*/
+@media (max-width:1025) { 
+
+    #weatherAndSearch {
+        margin-top: 5vh;
+        display: block;
+        position: relative;
+        left: 25vw;
+            input {
+                @include mixins.searchInput;
+                border-color: variabels.$darktheme-background-button;
+                width: 40vw;
+                height: 5vh;
+            }
+    
+            button {
+                @include mixins.searchButton;
+                color: variabels.$textdark-color;
+                background-color: variabels.$darktheme-background-button;
+                width: 20vw;
+                height: 6vh;
+            }
+            button:hover {
+                background-color: variabels.$lighttheme-background-div;
+            }
+    }
+
+
+    #weatherDivID {
+        width: 80vw;
+        margin-top: 2vh;
+        position: relative;
+        display: none;
+        left: -22vw;
+        margin-bottom: 10vh;
+    
+        div {
+            background-color: variabels.$darktheme-background-div;
+            border: 1px solid variabels.$borderdark-color;
+            margin: 1%;
+        }
+    
+        p {
+            position: relative;
+            display: block;
+            font-size: 60%;
+            padding: 1%;
+            font-weight: 700;
+        }
+    }
+
+    #logoAnimation {
+        img {
+            width: 5vw;
+            position: relative;
+    
+        }
+        
+    }
+}
+
+
+    
+    }

@@ -1,4 +1,4 @@
-
+@use "variabels";
 /*-----------------------------------------------------------------För rutan med väder info-----------------------------------------------------------------------------------------*/
 
 @keyframes weatherInfoAppear {
@@ -14,29 +14,9 @@
 };
 
 
-#weatherDivID {
-    width: 40vw;
-    margin-top: 2vh;
-    position: relative;
-    display: none;
-    left: -10vw;
-    margin-bottom: 10vh;
+.weatherDivClass {
     animation: weatherInfoAppear 2s;
-
-    div {
-        background-color: lightgreen;
-        border: 1px solid black;
-        margin: 1%;
-    }
-
-    p {
-        position: relative;
-        display: block;
-        font-size: 100%;
-        padding: 1%;
-        font-weight: 700;
-    }
-};
+}
 
 
 
@@ -45,29 +25,27 @@
 /*-----------------------------------------------------------------För golfbollen-----------------------------------------------------------------------------------------*/
 
 
-@keyframes golfBallSpinn {
+@keyframes golfBallSpinn { //Rotate funkar inte bara vid uppladdning funckar vid lokal med npm start?
     from {
-        transform:translateX(0) 
+        transform:translateX(0%) 
         rotate(0deg);
     }
 
     to {
         
-        transform:translateX(18vw) 
+        transform:translateX(800%) 
         rotate(360deg);
         
     }
 }
-
-
-#logoAnimation {
+ 
+.logoAnimationClass {
     img {
-        width: 2%;
-        animation: golfBallSpinn 6s linear infinite alternate;
-        
+        animation: golfBallSpinn 4s linear infinite alternate;
     }
-    
-};
+
+}
+
 
 
 /*--------------------------------------------------------------För bakgrunder--------------------------------------------------------------------------------------------*/

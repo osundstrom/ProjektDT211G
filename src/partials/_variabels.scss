@@ -1,0 +1,22 @@
+
+
+/*Mörkt tema*/
+$dark-color: #000000 ;
+$darktheme-background: rgb(110, 110, 110);
+$darktheme-background-div: rgb(0, 0, 0);
+$textdark-color: lighten($dark-color, 80%);
+$borderdark-color: lighten($dark-color, 70%);
+$darktheme-background-button: rgb(0, 0, 0);
+
+
+/*Ljust tema*/
+$light-color: #ffffff;
+$lighttheme-background: rgb(205, 228, 255);
+$text-color: darken($light-color, 100%);
+$borderlight-color: darken($light-color, 100%);
+$lighttheme-background-div: rgb(154, 243, 142);
+$lighttheme-background-button: rgb(255, 255, 255);
+
+/*Font*/
+$font-family: Georgia, 'Times New Roman', Times, serif;
+

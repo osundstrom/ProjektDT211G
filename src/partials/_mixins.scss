@@ -1,5 +1,5 @@
 
-
+@use "variabels";
 
 @mixin imagesBack {
     width: 100%;
@@ -17,9 +17,8 @@
      }
 }
 
+
 @mixin searchButton {
-    width: 10vw;
-    height: 6vh;
     margin-top: 1vh;
     position: relative;
     font-size: 140%;
@@ -28,8 +27,6 @@
 
 
 @mixin searchInput {
-    width: 20vw;
-    height: 6vh;
     font-size: 150%;
     display: block;
     position: relative;  
