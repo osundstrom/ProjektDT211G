@@ -1,11 +1,13 @@
 
 @use "partials/animation";
 @use "partials/pictures";
+@use "partials/mixins";
+@use "partials/variables";
 
 
 body {
     background-color: rgb(205, 228, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: variables.$font-family;
     overflow-x:hidden;
     width: 100vw;
 
@@ -25,22 +27,11 @@ body {
       
 
         input {
-            width: 20vw;
-            height: 6vh;
-            font-size: 150%;
-            display: block;
-            position: relative;
-          
+            @include mixins.searchInput;  
         }
-    
+
         button {
-            width: 10vw;
-            height: 6vh;
-            margin-top: 1vh;
-            position: relative;
-            font-size: 140%;
-            font-weight: 900;
-    
+            @include mixins.searchButton;
         }
 
         button:hover {

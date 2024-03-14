@@ -93,6 +93,9 @@ async function getWeather() {
     let weatherType = document.getElementById("weatherType");
     weatherType.textContent =  "Idag är det: " + weatherDescription;
 
+    let wetherMaxMin = document.getElementById("weatherMaxMin");
+    wetherMaxMin.textContent = "Dagens högsta temp: " + (tempData.temp_max - 273.15).toFixed(2)+ "°C " + "och dagens lägsta temp: " + (tempData.temp_min - 273.15).toFixed(2) + "°C";
+  
 
 
     let weatherDiv = document.getElementById("weatherDivID");
@@ -104,27 +107,41 @@ async function getWeather() {
     let imageMellan = document.getElementById("imageMellan");
     let imageKallt = document.getElementById("imageKallt");
 
+    let textKallt = document.getElementById("textKallt");
+    let textMellan = document.getElementById("textMellan");
+    let textVarmt = document.getElementById("textVarmt");
+
      
          if (weatherDiv.style.display === "none" && ((tempData.temp - 273.15) > 20)) {
           weatherDiv.style.display = "block";
           imageVarmt.style.display = "block";
           imageMellan.style.display = "none";
           imageKallt.style.display = "none";
+          textVarmt.style.display = "block";
+          textMellan.style.display = "none";
+          textKallt.style.display = "none";
+          
          }
          
         else if (weatherDiv.style.display === "none" && ((tempData.temp - 273.15) >= 5 && (tempData.temp - 273.15) <= 20)) {
          weatherDiv.style.display = "block";
          imageMellan.style.display = "block";
          imageVarmt.style.display = "none";
-          imageKallt.style.display = "none";
-         console.log("mitten")
+         imageKallt.style.display = "none";
+         textVarmt.style.display = "none";
+          textMellan.style.display = "block";
+          textKallt.style.display = "none";
+         
           }
 
         else if (weatherDiv.style.display === "none" && ((tempData.temp - 273.15) < 5)) {
          weatherDiv.style.display = "block";
          imageKallt.style.display = "block";
          imageVarmt.style.display = "none";
-          imageMellan.style.display = "none";
+         imageMellan.style.display = "none";
+         textVarmt.style.display = "none";
+          textMellan.style.display = "none";
+          textKallt.style.display = "block";
         }
 
         else {

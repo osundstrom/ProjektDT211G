@@ -1,0 +1,43 @@
+
+
+
+@mixin imagesBack {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+     img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+     }
+}
+
+@mixin searchButton {
+    width: 10vw;
+    height: 6vh;
+    margin-top: 1vh;
+    position: relative;
+    font-size: 140%;
+    font-weight: 900;
+}
+
+
+@mixin searchInput {
+    width: 20vw;
+    height: 6vh;
+    font-size: 150%;
+    display: block;
+    position: relative;  
+}
+
+
+@mixin textWeather {
+    display: none;
+   font-size: 130%;
+   text-decoration: underline;
+}

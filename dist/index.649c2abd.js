@@ -636,26 +636,39 @@ async function getLocation() {
     weatherName.textContent = "Koordinater: lon " + longitude + " lat " + latitude + "," + " M\xe4tplats: " + nameData + " " + sunData.country;
     let weatherType = document.getElementById("weatherType");
     weatherType.textContent = "Idag \xe4r det: " + weatherDescription;
+    let wetherMaxMin = document.getElementById("weatherMaxMin");
+    wetherMaxMin.textContent = "Dagens h\xf6gsta temp: " + (tempData.temp_max - 273.15).toFixed(2) + "\xb0C " + "och dagens l\xe4gsta temp: " + (tempData.temp_min - 273.15).toFixed(2) + "\xb0C";
     let weatherDiv = document.getElementById("weatherDivID");
     let imageVarmt = document.getElementById("imageVarmt");
     let imageMellan = document.getElementById("imageMellan");
     let imageKallt = document.getElementById("imageKallt");
+    let textKallt = document.getElementById("textKallt");
+    let textMellan = document.getElementById("textMellan");
+    let textVarmt = document.getElementById("textVarmt");
     if (weatherDiv.style.display === "none" && tempData.temp - 273.15 > 20) {
         weatherDiv.style.display = "block";
         imageVarmt.style.display = "block";
         imageMellan.style.display = "none";
         imageKallt.style.display = "none";
+        textVarmt.style.display = "block";
+        textMellan.style.display = "none";
+        textKallt.style.display = "none";
     } else if (weatherDiv.style.display === "none" && tempData.temp - 273.15 >= 5 && tempData.temp - 273.15 <= 20) {
         weatherDiv.style.display = "block";
         imageMellan.style.display = "block";
         imageVarmt.style.display = "none";
         imageKallt.style.display = "none";
-        console.log("mitten");
+        textVarmt.style.display = "none";
+        textMellan.style.display = "block";
+        textKallt.style.display = "none";
     } else if (weatherDiv.style.display === "none" && tempData.temp - 273.15 < 5) {
         weatherDiv.style.display = "block";
         imageKallt.style.display = "block";
         imageVarmt.style.display = "none";
         imageMellan.style.display = "none";
+        textVarmt.style.display = "none";
+        textMellan.style.display = "none";
+        textKallt.style.display = "block";
     } else {
         weatherDiv.style.display = "none";
         imageVarmt.style.display = "none";
