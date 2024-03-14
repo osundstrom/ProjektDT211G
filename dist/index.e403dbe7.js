@@ -635,13 +635,14 @@ async function getLocation() {
     weatherType.textContent = "Idag \xe4r det: " + weatherDescription;
     let weatherDiv = document.getElementById("weatherDivID");
     let entirePage = document.getElementById("divFull"); //byta bakgrund på denna
-    let goldvader1 = "url(bilder/'utomhus.webp')" //test
-    ;
-    if (weatherDiv.style.display = tempData.temp - 273.15 < 10) {
-        weatherDiv.style.display = "block";
-        entirePage.style.backgroundImage = goldvader1;
-        console.log("Byte bakgrund");
-    } else weatherDiv.style.display = "none";
+    let goldvader1 = "/src/bilder/utomhus.jpeg";
+    let goldvader2 = "/src/bilder/utomhus.jpeg?as=webp";
+    if (imageForBack.style.display = tempData.temp - 273.15 < 10) {
+        imageForBack.style.display = "block";
+        imageForBack.querySelector("img").src = goldvader1;
+        imageForBack.querySelector("source").srcset = goldvader2;
+        console.log("Byte Bild");
+    } else imageForBack.style.display = "none";
 }
 
 },{}]},["bSTWU","70khM"], "70khM", "parcelRequiree78e")

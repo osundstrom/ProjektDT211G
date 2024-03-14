@@ -48,16 +48,62 @@
   animation: 6s linear infinite alternate golfBallSpinn;
 }
 
-#entirePage {
-  width: 100vw;
+#imageVarmt {
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
   height: 100%;
-  font-family: Georgia, Times New Roman, Times, serif;
-  overflow-x: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-#divFull {
+#imageVarmt img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#imageMellan {
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#imageMellan img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#imageKallt {
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#imageKallt img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #cde4ff;
   width: 100vw;
-  height: 100vh;
+  font-family: Georgia, Times New Roman, Times, serif;
+  overflow-x: hidden;
 }
 
 #weatherAndSearch {
