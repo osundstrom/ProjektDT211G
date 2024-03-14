@@ -152,7 +152,7 @@
   }
 
   #textKallt, #textMellan, #textVarmt {
-    font-size: 130%;
+    font-size: 80%;
     text-decoration: underline;
     display: none;
   }
@@ -356,7 +356,7 @@
   }
 
   #textKallt, #textMellan, #textVarmt {
-    font-size: 130%;
+    font-size: 80%;
     text-decoration: underline;
     display: none;
   }

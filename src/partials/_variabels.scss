@@ -2,20 +2,20 @@
 
 /*Mörkt tema*/
 $dark-color: #000000 ;
-$darktheme-background: rgb(110, 110, 110);
-$darktheme-background-div: rgb(0, 0, 0);
+$darktheme-background: #6e6e6e;
+$darktheme-background-div: #000000;
 $textdark-color: lighten($dark-color, 80%);
 $borderdark-color: lighten($dark-color, 70%);
-$darktheme-background-button: rgb(0, 0, 0);
+$darktheme-background-button: #000000;
 
 
 /*Ljust tema*/
 $light-color: #ffffff;
-$lighttheme-background: rgb(205, 228, 255);
+$lighttheme-background: #cde4ff;
 $text-color: darken($light-color, 100%);
 $borderlight-color: darken($light-color, 100%);
-$lighttheme-background-div: rgb(154, 243, 142);
-$lighttheme-background-button: rgb(255, 255, 255);
+$lighttheme-background-div: #9af38e;
+$lighttheme-background-button: #ffffff;
 
 /*Font*/
 $font-family: Georgia, 'Times New Roman', Times, serif;
