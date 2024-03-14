@@ -635,7 +635,7 @@ async function getLocation() {
     weatherType.textContent = "Idag \xe4r det: " + weatherDescription;
     let weatherDiv = document.getElementById("weatherDivID");
     let entirePage = document.getElementById("divFull"); //byta bakgrund på denna
-    let goldvader1 = "url(bilder/golfboll.png)" //test
+    let goldvader1 = "url(bilder/'utomhus.webp')" //test
     ;
     if (weatherDiv.style.display = tempData.temp - 273.15 < 10) {
         weatherDiv.style.display = "block";

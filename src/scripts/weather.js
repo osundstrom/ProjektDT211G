@@ -90,7 +90,7 @@ async function getWeather() {
     let entirePage = document.getElementById("divFull"); //byta bakgrund på denna
 
 
-    let goldvader1 = "url(bilder/golfboll.png)" //test
+    let goldvader1 = "url(bilder/'utomhus.webp')" //test
      
          if (weatherDiv.style.display = "none" && (tempData.temp - 273.15) < 10) {
           weatherDiv.style.display = "block";
